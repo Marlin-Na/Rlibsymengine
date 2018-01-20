@@ -1,0 +1,2 @@
+^inst/symengine$
+^inst/symengine/.*$
