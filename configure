@@ -12,7 +12,6 @@ cmake                                  \
     -DWITH_SYMENGINE_ASSERT=ON         \
     -DWITH_MPFR=ON                     \
     -DWITH_MPC=ON                      \
-    -DWITH_OPENMP=ON                   \
     -DCMAKE_BUILD_TYPE=Debug           \
     -DWITH_BFD=yes                     \
     -DBUILD_TESTS:BOOL=OFF             \
