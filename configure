@@ -1,6 +1,7 @@
 #!/bin/sh
 
 set -x
+set -e
 
 cd inst/symengine
 
@@ -22,5 +23,3 @@ cmake                                  \
 make
 
 make install
-
-set +x
