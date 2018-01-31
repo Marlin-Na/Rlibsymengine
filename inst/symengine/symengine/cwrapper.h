@@ -334,6 +334,8 @@ CWRAPPER_OUTPUT_TYPE basic_dirichlet_eta(basic s, const basic a);
 CWRAPPER_OUTPUT_TYPE basic_gamma(basic s, const basic a);
 //! Assigns s = sqrt(a).
 CWRAPPER_OUTPUT_TYPE basic_sqrt(basic s, const basic a);
+//! Assigns s = cbrt(a).
+CWRAPPER_OUTPUT_TYPE basic_cbrt(basic s, const basic a);
 //! Assigns s = exp(a).
 CWRAPPER_OUTPUT_TYPE basic_exp(basic s, const basic a);
 //! Assigns s = log(a).
@@ -657,6 +659,28 @@ CWRAPPER_OUTPUT_TYPE basic_evalf(basic s, const basic b, unsigned long bits,
 //! Wrapper for as_numer_denom
 CWRAPPER_OUTPUT_TYPE basic_as_numer_denom(basic numer, basic denom,
                                           const basic x);
+
+//! Wrapper for LambdaRealDoubleVisitor
+typedef struct CLambdaRealDoubleVisitor CLambdaRealDoubleVisitor;
+CLambdaRealDoubleVisitor *lambda_real_double_visitor_new();
+void lambda_real_double_visitor_init(CLambdaRealDoubleVisitor *self,
+                                     const CVecBasic *args,
+                                     const CVecBasic *exprs, int perform_cse);
+void lambda_real_double_visitor_call(CLambdaRealDoubleVisitor *self,
+                                     double *const outs,
+                                     const double *const inps);
+void lambda_real_double_visitor_free(CLambdaRealDoubleVisitor *self);
+
+//! Wrapper for LambdaRealDoubleVisitor
+#ifdef HAVE_SYMENGINE_LLVM
+typedef struct CLLVMDoubleVisitor CLLVMDoubleVisitor;
+CLLVMDoubleVisitor *llvm_double_visitor_new();
+void llvm_double_visitor_init(CLLVMDoubleVisitor *self, const CVecBasic *args,
+                              const CVecBasic *exprs, int perform_cse);
+void llvm_double_visitor_call(CLLVMDoubleVisitor *self, double *const outs,
+                              const double *const inps);
+void llvm_double_visitor_free(CLLVMDoubleVisitor *self);
+#endif
 
 //! Print stacktrace on segfault
 void symengine_print_stack_on_segfault();
