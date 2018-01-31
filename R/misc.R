@@ -40,7 +40,10 @@ PkgLibsFlags <- function () {
     # Expect to be the same?
     stopifnot(dirname(lsymengine) == dirname(lteuchos))
 
-    ans <- c(libs, shQuote(lsymengine), shQuote(lteuchos))
+    # I don't know why this does not work....
+    # ans <- c(libs, shQuote(lsymengine), shQuote(lteuchos))
+    # TODO: perform space escape or separate them into three options
+    ans <- c(libs, lsymengine, lteuchos)
     cat(ans)
     invisible(ans)
 }
