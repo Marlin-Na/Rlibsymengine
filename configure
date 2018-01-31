@@ -8,13 +8,19 @@ cd inst/symengine
 # Install to `inst`
 # Do not build with tests
 # Do not build with benchmarks
+#
+# Temporarily disable BFD support (TODO):
+#    I have tried to include -lbfd, but it does not work, with the following error
+#    raised during the compilation of symengine.R.
+#        undefined symbol: bfd_check_format_matches.
+#    While gmp, mpfr and mpc works.
 cmake                                  \
     -DCMAKE_INSTALL_PREFIX:PATH=".."   \
     -DWITH_SYMENGINE_ASSERT=ON         \
     -DWITH_MPFR=ON                     \
     -DWITH_MPC=ON                      \
     -DCMAKE_BUILD_TYPE=Debug           \
-    -DWITH_BFD=yes                     \
+    -DWITH_BFD=OFF                     \
     -DBUILD_TESTS:BOOL=OFF             \
     -DBUILD_BENCHMARKS:BOOL=OFF        \
     .
