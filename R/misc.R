@@ -40,7 +40,8 @@ PkgLibsFlags <- function () {
     # Expect to be the same?
     stopifnot(dirname(lsymengine) == dirname(lteuchos))
 
-    ans <- c(libs, lsymengine, lteuchos)
-    ans
+    ans <- c(libs, shQuote(lsymengine), shQuote(lteuchos))
+    cat(ans)
+    invisible(ans)
 }
 
