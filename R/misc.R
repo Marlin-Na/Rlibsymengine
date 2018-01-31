@@ -48,3 +48,9 @@ PkgLibsFlags <- function () {
     invisible(ans)
 }
 
+#' @export
+CommitID <- function () {
+    d <- file.path(PkgPath(), "DESCRIPTION")
+    ans <- read.dcf(d)[, "SymEngineCommit"]
+    unname(ans)
+}
