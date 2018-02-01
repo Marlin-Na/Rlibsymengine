@@ -1,10 +1,11 @@
 Package: Rlibsymengine
-Title: What the Package Does (one line, title case)
-Version: 0.0.0.9000
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Title: SymEngine C++ Library
+Version: 0.0.1
+Authors@R: person("Jialin", "Ma", email = "marlin-@gmx.cn", role = c("aut", "cre"))
+Description: This package ships the static library of SymEngine
+    (https://github.com/symengine/symengine) for installation of the
+    symengine R package (https://github.com/marlin-na/symengine.R).
 Depends: R (>= 3.4.1)
-License: What license is it under?
 Encoding: UTF-8
 LazyData: true
 SystemRequirements: cmake
