@@ -31,6 +31,8 @@ can be removed. Correspondingly, updating symengine lib requires both updating
 this package and reinstalling the symengine R package. The approach taken here
 is somehow similar to the one described in
 [Section 5.8 of Writing R Extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Linking-to-other-packages).
+An example package taking this approach is `Rsamtools` in bioconductor, see its
+[vignette](http://bioconductor.org/packages/2.10/bioc/vignettes/Rsamtools/inst/doc/Rsamtools-UsingCLibraries.pdf).
 
 I keep it separated as an independent R package just for convenience of
 experimenting the idea, it may or may not merged into the main repository in
