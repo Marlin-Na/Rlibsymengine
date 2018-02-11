@@ -1,7 +1,17 @@
 #!/usr/bin/env bash
 
 set -x
-set -e
 
 cd inst/symengine
 make clean
+
+# Clean up CMakeFiles
+rm -r CMakeFiles
+rm -r */CMakeFiles
+rm -r */*/CMakeFiles
+
+rm -r cmake_install.cmake
+rm -r */cmake_install.cmake
+rm -r */*/cmake_install.cmake
+
+rm CMakeCache.txt
