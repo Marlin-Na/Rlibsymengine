@@ -1,4 +1,7 @@
 
+#' Get Package Path
+#'
+#' @return A length-one character vector
 #' @export
 PkgPath <- function () {
     system.file(package = "Rlibsymengine", mustWork = TRUE)
@@ -9,6 +12,11 @@ PkgPath <- function () {
 #     system.file("include", package = "Rlibsymengine", mustWork = TRUE)
 # }
 
+#' Get Compilation Flags for Linking
+#'
+#' Util function used in "symengine" R package.
+#'
+#' @return A length-one character vector
 #' @export
 PkgLibsFlags <- function () {
     libs <- c("-lgmp", "-lmpfr", "-lmpc") # TODO: bfd, etc.
@@ -48,6 +56,13 @@ PkgLibsFlags <- function () {
     invisible(ans)
 }
 
+
+#' Get Commit ID of the Source SymEngine Library
+#'
+#' The commit id of the source repository of SymEngine is specified in
+#' the DESCRIPTION file. This function simply reads it out.
+#'
+#' @return A length-one character vector.
 #' @export
 CommitID <- function () {
     d <- file.path(PkgPath(), "DESCRIPTION")
