@@ -44,4 +44,6 @@ provide win-builder, some effort may be needed to port symengine R package to
 windows. Also see the discussions at 
 https://stat.ethz.ch/pipermail/r-package-devel/2015q2/000097.html and
 https://stat.ethz.ch/pipermail/r-package-devel/2016q2/000897.html .
-
+Or perhaps we can download 
+[binaries](https://github.com/symengine/symengine/releases) on Windows platform
+instead of compiling them.
