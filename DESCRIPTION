@@ -11,4 +11,4 @@ LazyData: true
 SystemRequirements: cmake
 RoxygenNote: 6.0.1
 SymEngineCommit: 58286ba6b8cb1d49934e2f3ac9f82cf6136a3e0a
-License: MIT + file inst/symengine/LICENSE
+License: MIT
