@@ -11,5 +11,5 @@ LazyData: true
 SystemRequirements: GNU make,
                     cmake
 RoxygenNote: 6.0.1
-SymEngineCommit: 58286ba6b8cb1d49934e2f3ac9f82cf6136a3e0a
+SymEngineCommit: 22cef7062324caee649dd2b956a1e03cec83ff8b
 License: MIT
