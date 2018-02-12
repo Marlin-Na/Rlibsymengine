@@ -26,6 +26,6 @@ cmake                                  \
     .
 
 
-make
+$MAKE
 
-make install
+$MAKE install
