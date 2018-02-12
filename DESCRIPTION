@@ -9,7 +9,10 @@ Depends: R (>= 3.4.1)
 Encoding: UTF-8
 LazyData: true
 SystemRequirements: GNU make,
-                    cmake
+                    cmake,
+                    GMP (https://gmplib.org/),
+                    MPFR (http://www.mpfr.org/),
+                    MPC (http://www.multiprecision.org/mpc/)
 RoxygenNote: 6.0.1
 SymEngineCommit: 22cef7062324caee649dd2b956a1e03cec83ff8b
 License: MIT
