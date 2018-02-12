@@ -7,7 +7,7 @@
 PkgLibsFlags()
 }
 \value{
-A length-one character vector
+It prints and invisibly returns the list of flags as a character vector.
 }
 \description{
 Util function used in "symengine" R package.

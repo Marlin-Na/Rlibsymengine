@@ -16,7 +16,7 @@ PkgPath <- function () {
 #'
 #' Util function used in "symengine" R package.
 #'
-#' @return A length-one character vector
+#' @return It prints and invisibly returns the list of flags as a character vector.
 #' @export
 PkgLibsFlags <- function () {
     libs <- c("-lgmp", "-lmpfr", "-lmpc") # TODO: bfd, etc.
