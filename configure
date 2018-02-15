@@ -25,15 +25,7 @@ cmake                                  \
     -DBUILD_BENCHMARKS:BOOL=OFF        \
     .
 
-if [[ $MAKE ]]; then
-    $MAKE
-else
-    make
-fi
+$MAKE
 
-if [[ $MAKE ]]; then
-    $MAKE install
-else
-    make install
-fi
+$MAKE install
 
