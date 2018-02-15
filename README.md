@@ -1,4 +1,6 @@
 
+[![Travis-CI Build Status](https://travis-ci.org/Marlin-Na/Rlibsymengine.svg?branch=master)](https://travis-ci.org/Marlin-Na/Rlibsymengine)
+
 This R package aims to ship the static library of 
 [SymEnigne](https://github.com/symengine/symengine) for installation
 of the [symengine R package](https://github.com/marlin-na/symengine.R).
