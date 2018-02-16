@@ -19,7 +19,7 @@ PkgPath <- function () {
 #' @return It prints and invisibly returns the list of flags as a character vector.
 #' @export
 PkgLibsFlags <- function () {
-    libs <- c("-lgmp", "-lmpfr", "-lmpc") # TODO: bfd, etc.
+    libs <- c("-lmpc", "-lmpfr", "-lgmp") # TODO: bfd, etc.
 
     # Try to search for the static libraries, the location may be platform-dependent
 
@@ -51,7 +51,7 @@ PkgLibsFlags <- function () {
     # I don't know why this does not work....
     # ans <- c(libs, shQuote(lsymengine), shQuote(lteuchos))
     # TODO: perform space escape or separate them into three options
-    ans <- c(libs, lsymengine, lteuchos)
+    ans <- c(lsymengine, lteuchos, libs)
     cat(ans)
     invisible(ans)
 }
